@@ -12,9 +12,7 @@ const app = express();
 app.use(express.json({ extended: false }));
 app.use(cors());
 
-// app.use('/api/v1/auth', require('./routes/auth'));
-// app.use('/api/v1/wallet', require('./routes/wallet'));
-// app.use('/api/v1/users', require('./routes/users'));
+app.use('/api/v1/cadres', require('./routes/cadres'));
 
 const { PORT } = process.env;
 app.listen(PORT, () => {

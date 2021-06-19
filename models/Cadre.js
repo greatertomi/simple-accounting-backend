@@ -5,6 +5,10 @@ const cadreSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  date: {
+    type: Date,
+    default: Date.now
+  },
   deductions: [
     {
       name: {
@@ -17,11 +21,7 @@ const cadreSchema = new mongoose.Schema({
         default: 0
       }
     }
-  ],
-  date: {
-    type: Date,
-    default: Date.now
-  }
+  ]
 });
 
-mongoose.model('cadres', cadreSchema);
+mongoose.model('cadre', cadreSchema);
