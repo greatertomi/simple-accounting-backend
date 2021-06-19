@@ -5,7 +5,7 @@ const Cadre = mongoose.model('cadre');
 
 exports.getCadres = async (req, res) => {
   try {
-    const cadres = await Cadre.find();
+    const cadres = await Cadre.find().sort({ date: -1 });
     res.send(cadres);
   } catch (err) {
     console.log(err);
